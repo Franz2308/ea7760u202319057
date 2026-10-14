@@ -1,0 +1,122 @@
+<div class="form-container">
+  <mat-card class="form-card" role="region" aria-labelledby="form-title">
+    <mat-card-header class="form-header">
+      <mat-card-title id="form-title" class="main-title">
+        {{ 'new-charge.title' | translate }}
+      </mat-card-title>
+      <mat-card-subtitle class="subtitle">
+        {{ 'new-charge.subtitle' | translate }}
+      </mat-card-subtitle>
+    </mat-card-header>
+
+    <mat-card-content class="form-content">
+      @if (businessErrorKey) {
+        <div class="business-alert" role="alert" aria-live="polite">
+          <mat-icon class="alert-icon">warning</mat-icon>
+          <span>{{ businessErrorKey | translate }}</span>
+        </div>
+      }
+
+      <form [formGroup]="chargeForm" (ngSubmit)="onSubmit()" class="charge-form" novalidate>
+        <!-- Vehicle Type -->
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>{{ 'new-charge.vehicle-type' | translate }}</mat-label>
+          <mat-select formControlName="vehicleType" placeholder="{{ 'new-charge.select-vehicle-type' | translate }}">
+            @for (type of vehicleTypes; track type) {
+              <mat-option [value]="type">{{ type | uppercase }}</mat-option>
+            }
+          </mat-select>
+          @if (chargeForm.get('vehicleType')?.touched && chargeForm.get('vehicleType')?.hasError('required')) {
+            <mat-error>{{ 'new-charge.errors.required' | translate }}</mat-error>
+          }
+        </mat-form-field>
+
+        <!-- Vehicle Make (NHTSA API) -->
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>{{ 'new-charge.make' | translate }}</mat-label>
+          <mat-select
+            formControlName="make"
+            placeholder="{{ 'new-charge.select-make' | translate }}"
+            [disabled]="isLoadingMakes || availableMakes.length === 0"
+          >
+            @for (make of availableMakes; track make.id) {
+              <mat-option [value]="make">{{ make.name }}</mat-option>
+            }
+          </mat-select>
+          @if (isLoadingMakes) {
+            <mat-icon matSuffix class="spinning">sync</mat-icon>
+          }
+          @if (chargeForm.get('make')?.touched && chargeForm.get('make')?.hasError('required')) {
+            <mat-error>{{ 'new-charge.errors.required' | translate }}</mat-error>
+          }
+        </mat-form-field>
+
+        <!-- Charging Port Type -->
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>{{ 'new-charge.charging-port-type' | translate }}</mat-label>
+          <mat-select formControlName="chargingPortType" placeholder="{{ 'new-charge.select-port-type' | translate }}">
+            @for (port of portTypes; track port) {
+              <mat-option [value]="port">{{ port }}</mat-option>
+            }
+          </mat-select>
+          @if (chargeForm.get('chargingPortType')?.touched && chargeForm.get('chargingPortType')?.hasError('required')) {
+            <mat-error>{{ 'new-charge.errors.required' | translate }}</mat-error>
+          }
+        </mat-form-field>
+
+        <!-- Power Demand in kW -->
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>{{ 'new-charge.kw-demand' | translate }}</mat-label>
+          <input
+            matInput
+            type="number"
+            formControlName="kwDemand"
+            min="1"
+            step="0.5"
+            placeholder="e.g. 150"
+          />
+          <span matSuffix class="unit-suffix">kW</span>
+          @if (chargeForm.get('kwDemand')?.touched && chargeForm.get('kwDemand')?.hasError('required')) {
+            <mat-error>{{ 'new-charge.errors.required' | translate }}</mat-error>
+          }
+          @if (chargeForm.get('kwDemand')?.touched && chargeForm.get('kwDemand')?.hasError('min')) {
+            <mat-error>{{ 'new-charge.errors.invalid-kw' | translate }}</mat-error>
+          }
+        </mat-form-field>
+
+        <!-- Fast Charge Toggle -->
+        <div class="toggle-row">
+          <mat-slide-toggle formControlName="isFastCharge" color="primary">
+            {{ 'new-charge.is-fast-charge' | translate }}
+          </mat-slide-toggle>
+        </div>
+
+        <!-- Form Actions -->
+        <div class="form-actions">
+          <button
+            mat-button
+            type="button"
+            (click)="onCancel()"
+            class="cancel-button"
+            [disabled]="isSubmitting"
+          >
+            {{ 'new-charge.cancel' | translate }}
+          </button>
+
+          <button
+            mat-raised-button
+            color="primary"
+            type="submit"
+            class="submit-button"
+            [disabled]="isSubmitting"
+          >
+            @if (isSubmitting) {
+              <mat-spinner diameter="18" class="button-spinner"></mat-spinner>
+            }
+            {{ 'new-charge.create' | translate }}
+          </button>
+        </div>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>

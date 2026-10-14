@@ -1,0 +1,68 @@
+.form-container {
+  max-width: 600px;
+  margin: 24px auto;
+  padding: 0 16px;
+}
+
+.form-card {
+  padding: 16px;
+}
+
+.main-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.subtitle {
+  font-size: 0.9rem;
+  color: #666666;
+}
+
+.business-alert {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #ffebee;
+  color: #c62828;
+  padding: 10px 14px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  font-size: 0.9rem;
+}
+
+.charge-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.full-width {
+  width: 100%;
+  margin-bottom: 8px;
+}
+
+.unit-suffix {
+  margin-right: 8px;
+  color: #666;
+}
+
+.toggle-row {
+  margin: 8px 0 16px 0;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.spinning {
+  animation: spin 1.2s linear infinite;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
