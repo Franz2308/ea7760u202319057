@@ -1,0 +1,23 @@
+.language-switcher-group {
+  border-radius: 20px;
+  overflow: hidden;
+  height: 32px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+::ng-deep .language-switcher-group .mat-button-toggle-label-content {
+  line-height: 30px;
+  padding: 0 10px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #e2e2e2;
+}
+
+::ng-deep .language-switcher-group .mat-button-toggle-checked {
+  background-color: #e82127 !important;
+}
+
+::ng-deep .language-switcher-group .mat-button-toggle-checked .mat-button-toggle-label-content {
+  color: #ffffff !important;
+}

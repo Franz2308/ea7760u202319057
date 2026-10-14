@@ -1,0 +1,27 @@
+.footer-content {
+  background-color: #171a20;
+  color: #9ca3af;
+  padding: 1.25rem 1.5rem;
+  font-size: 0.85rem;
+  border-top: 1px solid #2d3139;
+  margin-top: auto;
+}
+
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.footer-inner p {
+  margin: 0;
+}
+
+.student-authorship {
+  color: #d1d5db;
+  font-weight: 500;
+}

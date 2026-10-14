@@ -1,0 +1,70 @@
+<mat-sidenav-container class="sidenav-container">
+  <!-- Lateral Sidebar / Sidenav -->
+  <mat-sidenav #sidenav mode="over" class="app-sidenav" role="navigation" aria-label="Main Navigation">
+    <div class="sidenav-header">
+      <span class="sidenav-title">Tesla Supercharger</span>
+    </div>
+
+    <mat-nav-list>
+      @for (option of options(); track option.label) {
+        <a
+          mat-list-item
+          [routerLink]="option.link"
+          routerLinkActive="active-nav-item"
+          (click)="sidenav.close()"
+        >
+          <mat-icon matListItemIcon>{{ option.icon }}</mat-icon>
+          <span matListItemTitle>{{ option.label | translate }}</span>
+        </a>
+      }
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <!-- Main Shell Content -->
+  <mat-sidenav-content class="sidenav-content">
+    <mat-toolbar class="main-toolbar" role="banner">
+      <mat-toolbar-row>
+        <button
+          mat-icon-button
+          (click)="sidenav.toggle()"
+          aria-label="Toggle navigation menu"
+          class="menu-button"
+        >
+          <mat-icon>menu</mat-icon>
+        </button>
+
+        <div class="brand-container" routerLink="/home" role="link" tabindex="0">
+          @if (!logoError) {
+            <img
+              [src]="logoUrl"
+              alt="Tesla"
+              class="tesla-logo"
+              (error)="onLogoError()"
+            />
+          } @else {
+            <span class="tesla-badge">T</span>
+          }
+          <span class="platform-title">{{ 'toolbar.title' | translate }}</span>
+        </div>
+
+        <div class="mat-spacer"></div>
+
+        <div class="desktop-nav">
+          @for (option of options(); track option.label) {
+            <a mat-button [routerLink]="option.link" routerLinkActive="active-toolbar-link">
+              {{ option.label | translate }}
+            </a>
+          }
+        </div>
+
+        <app-language-switcher></app-language-switcher>
+      </mat-toolbar-row>
+    </mat-toolbar>
+
+    <main class="page-content" role="main">
+      <router-outlet></router-outlet>
+    </main>
+
+    <app-footer-content></app-footer-content>
+  </mat-sidenav-content>
+</mat-sidenav-container>
