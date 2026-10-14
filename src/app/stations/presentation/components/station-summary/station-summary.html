@@ -1,0 +1,74 @@
+<mat-card class="station-card" [class.station-inactive]="!station.isActive" role="region" [attr.aria-label]="station.stationName">
+  <mat-card-header class="station-header">
+    <div class="header-content">
+      <div class="title-row">
+        <mat-card-title class="station-title">{{ station.stationName }}</mat-card-title>
+        <span class="status-badge" [class.status-active]="station.isActive" [class.status-inactive]="!station.isActive">
+          <mat-icon class="status-icon">{{ station.isActive ? 'check_circle' : 'cancel' }}</mat-icon>
+          {{ (station.isActive ? 'station-summary.active' : 'station-summary.inactive') | translate }}
+        </span>
+      </div>
+      <mat-card-subtitle class="station-subtitle">
+        {{ station.vehicleType | uppercase }} • {{ station.maxGridKwCapacity }} kW Max Grid
+      </mat-card-subtitle>
+    </div>
+  </mat-card-header>
+
+  <mat-divider></mat-divider>
+
+  <mat-card-content class="station-content">
+    <div class="section-label">{{ 'station-summary.charging-vehicles' | translate }}</div>
+
+    @if (stationCharges.length === 0) {
+      <div class="empty-state" role="status">
+        <mat-icon class="empty-icon">ev_station</mat-icon>
+        <span class="empty-text">{{ 'station-summary.empty' | translate }}</span>
+      </div>
+    } @else {
+      <div class="charges-list" role="list">
+        @for (charge of stationCharges; track charge.id) {
+          <div class="charge-item" role="listitem">
+            <div class="charge-main-info">
+              <span class="make-name">{{ charge.makeName }}</span>
+              <span class="port-type">({{ charge.chargingPortType }})</span>
+              <span class="charge-time">{{ charge.registeredAt | date:'shortTime' }}</span>
+            </div>
+
+            <div class="charge-demand-info">
+              <span class="kw-demand">{{ charge.kwDemand | number:'1.1-2' }} kW</span>
+              @if (charge.isFastCharge) {
+                <span class="fast-charge-badge" title="Fast Charge">
+                  <mat-icon class="bolt-icon">bolt</mat-icon>
+                  {{ 'station-summary.fast-charge' | translate }}
+                </span>
+              }
+            </div>
+          </div>
+        }
+      </div>
+    }
+  </mat-card-content>
+
+  <mat-divider></mat-divider>
+
+  <mat-card-footer class="station-footer">
+    <div class="kpi-container">
+      <div class="kpi-box">
+        <span class="kpi-label">{{ 'station-summary.total-grid-load' | translate }}</span>
+        <span class="kpi-value load-value">{{ totalGridLoad | number:'1.1-2' }} kW</span>
+      </div>
+
+      <div class="kpi-box">
+        <span class="kpi-label">{{ 'station-summary.available-grid-margin' | translate }}</span>
+        <span class="kpi-value margin-value" [class.margin-low]="availableGridMargin < 100">
+          {{ availableGridMargin | number:'1.1-2' }} kW
+        </span>
+      </div>
+
+      <div class="kpi-box">
+        <span class="kpi-label">{{ 'station-summary.active-stalls-ratio' | translate }}</span>
+        <span class="kpi-value ratio-value">{{ activeStallsRatio }}</span>
+      </div>
+    </div>
+  </mat-card-footer>
+</mat-card>

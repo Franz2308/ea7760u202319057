@@ -1,0 +1,243 @@
+.station-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  border: 1px solid #e5e7eb;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.station-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.station-inactive {
+  opacity: 0.75;
+  border-left: 4px solid #9ca3af;
+}
+
+.station-header {
+  padding: 1.25rem 1.25rem 1rem;
+}
+
+.header-content {
+  width: 100%;
+}
+
+.title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.station-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #171a20;
+  line-height: 1.3;
+}
+
+.station-subtitle {
+  font-size: 0.85rem;
+  color: #5c5e62;
+  font-weight: 500;
+}
+
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.2rem 0.55rem;
+  border-radius: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.status-icon {
+  font-size: 14px;
+  width: 14px;
+  height: 14px;
+}
+
+.status-active {
+  background-color: #e6f4ea;
+  color: #137333;
+}
+
+.status-inactive {
+  background-color: #f1f3f4;
+  color: #5f6368;
+}
+
+.station-content {
+  padding: 1.25rem;
+  flex: 1 1 auto;
+}
+
+.section-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #888888;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.75rem;
+}
+
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+  color: #9e9e9e;
+  background-color: #fafafa;
+  border-radius: 8px;
+  border: 1px dashed #e0e0e0;
+}
+
+.empty-icon {
+  font-size: 32px;
+  width: 32px;
+  height: 32px;
+  margin-bottom: 0.5rem;
+}
+
+.empty-text {
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.charges-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.charge-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.6rem 0.75rem;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  border: 1px solid #eeeeee;
+}
+
+.charge-main-info {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.make-name {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #171a20;
+}
+
+.port-type {
+  font-size: 0.8rem;
+  color: #666666;
+  font-weight: 500;
+}
+
+.charge-time {
+  font-size: 0.75rem;
+  color: #888888;
+  font-weight: 400;
+}
+
+.charge-demand-info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.kw-demand {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: #171a20;
+}
+
+.fast-charge-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.2rem;
+  background-color: #fff0f0;
+  color: #e82127;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.15rem 0.45rem;
+  border-radius: 10px;
+  border: 1px solid #ffcdd2;
+}
+
+.bolt-icon {
+  font-size: 13px;
+  width: 13px;
+  height: 13px;
+}
+
+.station-footer {
+  padding: 1rem 1.25rem;
+  background-color: #fafbfc;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+.kpi-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+  width: 100%;
+}
+
+.kpi-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.kpi-label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #70757a;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  line-height: 1.2;
+  margin-bottom: 0.25rem;
+}
+
+.kpi-value {
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.load-value {
+  color: #171a20;
+}
+
+.margin-value {
+  color: #137333;
+}
+
+.margin-low {
+  color: #b06000;
+}
+
+.ratio-value {
+  color: #1a73e8;
+}
+
+@media (max-width: 480px) {
+  .kpi-container {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+}

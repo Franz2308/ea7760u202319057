@@ -1,0 +1,39 @@
+<div class="home-container" role="main">
+  <!-- Hero Section -->
+  <header class="home-hero">
+    <h1 class="hero-title">{{ 'home.title' | translate }}</h1>
+    <p class="hero-subtitle">{{ 'home.content' | translate }}</p>
+  </header>
+
+  <!-- Charging Stations Section -->
+  <section class="stations-section" aria-labelledby="stations-heading">
+    <div class="section-header">
+      <h2 id="stations-heading" class="section-title">
+        {{ 'home.charging-stations' | translate }}
+      </h2>
+    </div>
+
+    @if (store.loading()) {
+      <div class="loading-container" role="status" aria-live="polite">
+        <mat-spinner diameter="44"></mat-spinner>
+      </div>
+    } @else if (store.error()) {
+      <div class="error-container" role="alert">
+        <mat-icon class="error-icon">error_outline</mat-icon>
+        <p class="error-message">{{ store.error() }}</p>
+      </div>
+    } @else {
+      <!-- 2-column Grid List of Station Summary cards -->
+      <div class="stations-grid" role="list">
+        @for (station of store.stations(); track station.id) {
+          <div class="grid-item" role="listitem">
+            <app-station-summary
+              [station]="station"
+              [allCharges]="store.charges()"
+            ></app-station-summary>
+          </div>
+        }
+      </div>
+    }
+  </section>
+</div>
