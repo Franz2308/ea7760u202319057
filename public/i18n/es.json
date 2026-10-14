@@ -1,0 +1,54 @@
+{
+  "option": {
+    "home": "Inicio",
+    "new-charge": "Nueva Carga de Vehículo"
+  },
+  "toolbar": {
+    "title": "Tesla Supercharger & Fleet Platform"
+  },
+  "home": {
+    "title": "Inicio",
+    "content": "Distribución Inteligente de Energía para Flotas y Gestión de Superchargers.",
+    "charging-stations": "Estaciones de Carga"
+  },
+  "page-not-found": {
+    "title": "Página no encontrada",
+    "content": "La ruta <strong>{{ invalid_path }}</strong> no es válida.",
+    "go-home": "Retornar a Inicio"
+  },
+  "footer": {
+    "rights": "Todos los derechos reservados."
+  },
+  "station-summary": {
+    "active": "Activa",
+    "inactive": "Inactiva",
+    "charging-vehicles": "Cargas Activas de Vehículos",
+    "empty": "Vacío",
+    "fast-charge": "Carga Rápida",
+    "total-grid-load": "Carga Total de Red",
+    "available-grid-margin": "Margen de Red Disponible",
+    "active-stalls-ratio": "Proporción de Puestos Activos"
+  },
+  "new-charge": {
+    "title": "Nueva Carga de Vehículo",
+    "subtitle": "Registrar Demanda de Potencia de Vehículo Eléctrico a Estación",
+    "vehicle-type": "Tipo de Vehículo",
+    "select-vehicle-type": "Seleccionar Tipo de Vehículo",
+    "make": "Marca de Vehículo",
+    "select-make": "Seleccionar Marca de Vehículo",
+    "charging-port-type": "Tipo de Conector de Carga",
+    "select-port-type": "Seleccionar Tipo de Conector",
+    "kw-demand": "Demanda de Potencia (kW)",
+    "is-fast-charge": "Carga Rápida",
+    "create": "Crear",
+    "cancel": "Cancelar",
+    "errors": {
+      "required": "Este campo es obligatorio.",
+      "invalid-kw": "La demanda de potencia debe ser mayor a 0.",
+      "no-station": "No se encontró estación de carga para este tipo de vehículo.",
+      "station-inactive": "La estación de carga asignada se encuentra inactiva.",
+      "station-full": "Todos los puestos disponibles están ocupados.",
+      "exceeds-margin": "La demanda de potencia solicitada excede el margen de red disponible."
+    }
+  }
+}

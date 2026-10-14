@@ -1,0 +1,54 @@
+{
+  "option": {
+    "home": "Home",
+    "new-charge": "New Vehicle Charge"
+  },
+  "toolbar": {
+    "title": "Tesla Supercharger & Fleet Platform"
+  },
+  "home": {
+    "title": "Home",
+    "content": "Intelligent Fleet Power Distribution and Supercharger Management.",
+    "charging-stations": "Charging Stations"
+  },
+  "page-not-found": {
+    "title": "Page not found",
+    "content": "The path <strong>{{ invalid_path }}</strong> is not valid.",
+    "go-home": "Return to Home"
+  },
+  "footer": {
+    "rights": "All rights reserved."
+  },
+  "station-summary": {
+    "active": "Active",
+    "inactive": "Inactive",
+    "charging-vehicles": "Active Vehicle Charges",
+    "empty": "Empty",
+    "fast-charge": "Fast Charge",
+    "total-grid-load": "Total Grid Load",
+    "available-grid-margin": "Available Grid Margin",
+    "active-stalls-ratio": "Active Stalls Ratio"
+  },
+  "new-charge": {
+    "title": "New Vehicle Charge",
+    "subtitle": "Register Electric Vehicle Power Demand to Station",
+    "vehicle-type": "Vehicle Type",
+    "select-vehicle-type": "Select Vehicle Type",
+    "make": "Vehicle Make",
+    "select-make": "Select Vehicle Make",
+    "charging-port-type": "Charging Port Type",
+    "select-port-type": "Select Port Type",
+    "kw-demand": "Power Demand (kW)",
+    "is-fast-charge": "Fast Charge",
+    "create": "Create",
+    "cancel": "Cancel",
+    "errors": {
+      "required": "This field is required.",
+      "invalid-kw": "Power demand must be greater than 0.",
+      "no-station": "No charging station found for this vehicle type.",
+      "station-inactive": "The assigned charging station is currently inactive.",
+      "station-full": "All available stalls are occupied.",
+      "exceeds-margin": "Requested power demand exceeds available grid margin."
+    }
+  }
+}

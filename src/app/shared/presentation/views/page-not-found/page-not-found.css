@@ -1,0 +1,44 @@
+.not-found-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+}
+
+.not-found-card {
+  max-width: 500px;
+  width: 100%;
+  padding: 2.5rem;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e5e7eb;
+  text-align: center;
+}
+
+.not-found-card h1 {
+  font-size: 1.5rem;
+  color: #171a20;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.not-found-body {
+  font-size: 1rem;
+  color: #5c5e62;
+  margin-bottom: 2rem;
+  word-break: break-all;
+}
+
+.action-row {
+  display: flex;
+  justify-content: center;
+}
+
+.action-row button {
+  background-color: #171a20 !important;
+  color: #ffffff !important;
+  font-weight: 600;
+  padding: 0.5rem 1.5rem;
+  border-radius: 6px;
+}
