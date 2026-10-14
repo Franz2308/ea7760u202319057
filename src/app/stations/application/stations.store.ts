@@ -7,7 +7,7 @@ import { StationsApi } from '../infrastructure/stations-api';
 /**
  * Application state store managing charging stations and vehicle charges.
  *
- * @remarks
+ * @summary
  * Coordinates station and charge collections, reactive loading states, and error handling
  * using Angular Signals, adhering to the UPC application store pattern.
  *

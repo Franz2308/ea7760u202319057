@@ -4,10 +4,6 @@ import { BaseEntity } from './base-entity';
 /**
  * Defines conversions between domain entities and API representations.
  *
- * @typeParam TEntity - Domain entity type.
- * @typeParam TResource - Resource type exchanged with endpoint operations.
- * @typeParam TResponse - Response envelope type returned by collection queries.
- *
  * @author Frank Huingo - u202319057
  */
 export interface BaseAssembler<

@@ -1,7 +1,7 @@
 /**
  * Development environment configuration.
  *
- * @remarks
+ * @summary
  * Defines development configuration variables for testing with json-server.
  *
  * @author Frank Huingo - u202319057

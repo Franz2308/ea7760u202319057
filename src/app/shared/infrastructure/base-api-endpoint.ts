@@ -8,11 +8,6 @@ import { BaseAssembler } from './base-assembler';
 /**
  * Provides generic CRUD operations for a single REST endpoint.
  *
- * @typeParam TEntity - Domain entity handled by the endpoint.
- * @typeParam TResource - Resource representation exchanged with the API.
- * @typeParam TResponse - Response envelope returned for collection queries.
- * @typeParam TAssembler - Mapper that translates between entities and resources.
- *
  * @author Frank Huingo - u202319057
  */
 export abstract class BaseApiEndpoint<

@@ -4,7 +4,7 @@ import { VehicleCharge } from './vehicle-charge.entity';
 /**
  * Charging Station domain entity.
  *
- * @remarks
+ * @summary
  * Encapsulates domain logic and formulas: Total Grid Load, Available Grid Margin,
  * Active Stalls Ratio, and simultaneous registration validation rules.
  *

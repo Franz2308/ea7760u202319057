@@ -1,7 +1,7 @@
 /**
  * Production environment configuration.
  *
- * @remarks
+ * @summary
  * Defines external and local REST endpoints for the Tesla Supercharger platform.
  *
  * @author Frank Huingo - u202319057

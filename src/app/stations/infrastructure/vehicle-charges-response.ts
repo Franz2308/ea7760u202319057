@@ -19,8 +19,6 @@ export interface VehicleChargeResource extends BaseResource {
 
 /**
  * Response envelope for vehicle charge collection queries.
- *
- * @author Frank Huingo - u202319057
  */
 export interface VehicleChargesResponse extends BaseResponse {
   charges?: VehicleChargeResource[];

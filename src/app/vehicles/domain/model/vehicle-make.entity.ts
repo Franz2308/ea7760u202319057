@@ -3,7 +3,7 @@ import { BaseEntity } from '../../../shared/domain/model/base-entity';
 /**
  * Vehicle Make domain entity.
  *
- * @remarks
+ * @summary
  * Represents an automotive brand/make retrieved from the NHTSA external vehicle API.
  *
  * @author Frank Huingo - u202319057

@@ -20,8 +20,6 @@ export interface ChargingStationResource extends BaseResource {
 
 /**
  * Response envelope for charging station collection queries.
- *
- * @author Frank Huingo - u202319057
  */
 export interface ChargingStationsResponse extends BaseResponse {
   stations?: ChargingStationResource[];
