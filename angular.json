@@ -9,35 +9,7 @@
   "projects": {
     "ea7760u202319057": {
       "projectType": "application",
-      "schematics": {
-        "@schematics/angular:component": {
-          "type": "component",
-          "addTypeToClassName": true
-        },
-        "@schematics/angular:directive": {
-          "type": "directive",
-          "addTypeToClassName": true
-        },
-        "@schematics/angular:service": {
-          "type": "service",
-          "addTypeToClassName": true
-        },
-        "@schematics/angular:guard": {
-          "typeSeparator": "."
-        },
-        "@schematics/angular:interceptor": {
-          "typeSeparator": "."
-        },
-        "@schematics/angular:module": {
-          "typeSeparator": "."
-        },
-        "@schematics/angular:pipe": {
-          "typeSeparator": "."
-        },
-        "@schematics/angular:resolver": {
-          "typeSeparator": "."
-        }
-      },
+      "schematics": {},
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -53,7 +25,7 @@
                 "input": "public"
               }
             ],
-            "styles": ["src/styles.css"]
+            "styles": ["src/material-theme.scss", "src/styles.css"]
           },
           "configurations": {
             "production": {
