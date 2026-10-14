@@ -1,98 +1,63 @@
 .home-container {
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0 auto;
-  padding: 2.5rem 1.5rem;
+  padding: 24px 16px;
 }
 
 .home-hero {
-  margin-bottom: 2.5rem;
-  padding-bottom: 1.5rem;
-  border-bottom: 1px solid #e5e7eb;
+  margin-bottom: 24px;
 }
 
 .hero-title {
-  font-size: 2.25rem;
-  font-weight: 700;
-  color: #171a20;
-  letter-spacing: -0.5px;
-  margin: 0 0 0.5rem 0;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin: 0 0 8px 0;
 }
 
 .hero-subtitle {
-  font-size: 1.15rem;
-  color: #5c5e62;
+  font-size: 1rem;
+  color: #666666;
   margin: 0;
-  line-height: 1.5;
-  font-weight: 400;
 }
 
 .stations-section {
-  display: flex;
-  flex-direction: column;
+  margin-top: 16px;
 }
 
 .section-header {
-  margin-bottom: 1.5rem;
+  margin-bottom: 16px;
 }
 
 .section-title {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #171a20;
-  letter-spacing: -0.2px;
+  font-size: 1.3rem;
+  font-weight: 600;
   margin: 0;
 }
 
 .stations-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 1.5rem;
-}
-
-.grid-item {
-  display: flex;
-  flex-direction: column;
+  gap: 16px;
 }
 
 .loading-container {
   display: flex;
   justify-content: center;
-  align-items: center;
-  padding: 4rem 0;
+  padding: 32px 0;
 }
 
 .error-container {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
-  background-color: #fef2f2;
-  border: 1px solid #fee2e2;
-  color: #b91c1c;
-  padding: 1rem 1.25rem;
-  border-radius: 8px;
-}
-
-.error-icon {
-  font-size: 24px;
-  width: 24px;
-  height: 24px;
-}
-
-.error-message {
-  margin: 0;
-  font-weight: 500;
+  gap: 8px;
+  background-color: #ffebee;
+  color: #c62828;
+  padding: 12px 16px;
+  border-radius: 4px;
 }
 
 @media (max-width: 768px) {
   .stations-grid {
     grid-template-columns: 1fr;
-  }
-
-  .hero-title {
-    font-size: 1.75rem;
-  }
-
-  .hero-subtitle {
-    font-size: 1rem;
   }
 }

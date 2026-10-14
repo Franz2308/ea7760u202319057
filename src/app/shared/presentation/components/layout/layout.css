@@ -3,16 +3,12 @@
 }
 
 .app-sidenav {
-  width: 250px;
-  background-color: #ffffff;
-  border-right: 1px solid #e5e7eb;
+  width: 240px;
 }
 
 .sidenav-header {
-  padding: 1.25rem 1rem;
-  background-color: #171a20;
-  color: #ffffff;
-  font-weight: 700;
+  padding: 16px;
+  font-weight: 600;
   font-size: 1rem;
 }
 
@@ -23,46 +19,42 @@
 }
 
 .main-toolbar {
-  background-color: #171a20 !important;
-  color: #ffffff !important;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 .menu-button {
-  color: #ffffff;
-  margin-right: 0.5rem;
+  margin-right: 8px;
 }
 
 .brand-container {
   display: flex;
   align-items: center;
-  gap: 0.6rem;
+  gap: 8px;
   cursor: pointer;
-  outline: none;
 }
 
 .tesla-logo {
-  height: 26px;
+  height: 22px;
   width: auto;
-  filter: brightness(0) invert(1);
 }
 
 .tesla-badge {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 26px;
-  height: 26px;
-  background-color: #e82127;
+  width: 24px;
+  height: 24px;
+  background-color: #d32f2f;
   color: #ffffff;
-  font-weight: 700;
+  font-weight: bold;
   border-radius: 4px;
 }
 
 .platform-title {
-  font-size: 1.05rem;
+  font-size: 1rem;
   font-weight: 500;
-  letter-spacing: 0.2px;
 }
 
 .mat-spacer {
@@ -72,22 +64,8 @@
 .desktop-nav {
   display: flex;
   align-items: center;
-  gap: 0.25rem;
-  margin-right: 1rem;
-}
-
-.desktop-nav a {
-  color: #e5e7eb;
-}
-
-.active-toolbar-link {
-  color: #ffffff !important;
-  background-color: rgba(255, 255, 255, 0.12) !important;
-}
-
-.active-nav-item {
-  background-color: #f3f4f6 !important;
-  font-weight: 700 !important;
+  gap: 4px;
+  margin-right: 12px;
 }
 
 .page-content {

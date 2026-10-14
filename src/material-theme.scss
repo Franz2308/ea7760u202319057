@@ -2,13 +2,6 @@
 
 @include mat.core();
 
-:root {
-  @include mat.toolbar-overrides((
-    container-background-color: #171a20,
-    container-text-color: #ffffff
-  ));
-}
-
 html {
   height: 100%;
   @include mat.theme((
